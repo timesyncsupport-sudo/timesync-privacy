@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
+<html lang="de"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Datenschutzerklärung – Time Sync</title>
@@ -25,12 +24,12 @@ p, li { font-size: 16px; }
     margin: 20px 0;
 }
 </style>
-</head>
-<body>
+</head><body>
 
 <h1>Datenschutzerklärung für Time Sync</h1>
-<p><strong>Stand: 24. September 2026</strong></p>
+<p><strong>Stand: 16. Oktober 2026</strong></p>
 
+<div class="notice"><strong>Versionshinweis:</strong> Ab Version 1.0.5 verzichtet Time Sync auf Firebase und Google Analytics. Bis einschließlich Version 1.0.4 enthaltene Analysefunktionen werden durch ein Update dieses Textes allein nicht auf bereits installierten Geräten deaktiviert. Die Hinweise zu älteren Versionen bleiben deshalb nachfolgend aufgeführt.</div>
 <h2>1. Verantwortlicher</h2>
 <p>Verantwortlicher für die Verarbeitung personenbezogener Daten im Zusammenhang mit der App
 <strong>Time Sync – Digitale Arbeitszeiterfassung</strong> ist:</p>
@@ -65,9 +64,12 @@ und welche Rechte dir zustehen.
 <li>Arbeitgeber bzw. Auftraggeber</li>
 <li>Datum der Tätigkeit</li>
 <li>Beginn und Ende der Arbeitszeit</li>
-<li>Arbeitsdauer</li>
+<li>Pausendauer sowie gegebenenfalls Beginn und Ende einer Pause</li>
+<li>Arbeitsdauer nach Abzug der Pausen</li>
 <li>hinterlegte Stundenlöhne</li>
-<li>gegebenenfalls Angaben zu Provisionen</li>
+<li>gegebenenfalls Angaben zu Provisionen je Zeiteintrag</li>
+<li>Auszahlungsbeträge, Zahlungsdatum und zugehöriger Abrechnungsmonat</li>
+<li>berechnete Vergütungen und offene Beträge</li>
 <li>Einstellungen der App</li>
 <li>von dir erzeugte Auswertungen und Exporte</li>
 </ul>
@@ -77,96 +79,37 @@ Diese Daten werden in der derzeitigen App-Version grundsätzlich
 <strong>lokal auf deinem Android-Gerät</strong> gespeichert.
 </p>
 <p>
-Eine automatische Übertragung dieser Arbeitszeit- und Arbeitgeberdaten an Firebase oder
-einen Server findet in der derzeitigen Version nicht statt.
+Time Sync überträgt diese Eingaben nicht automatisch an Firebase oder einen eigenen Server. Davon zu unterscheiden ist eine mögliche Android-Systemdatensicherung, die im folgenden Abschnitt beschrieben wird.
 </p>
 
-<h2>4. Speicherung auf dem Gerät</h2>
-<p>
-Die App verwendet den lokalen Speicher des Android-Geräts, um Einstellungen, Arbeitgeber
-und Arbeitszeiteinträge zu speichern.
-</p>
-<p>
-Die Daten werden benötigt, damit die App beispielsweise beim erneuten Öffnen bereits
-erfasste Arbeitszeiten und Arbeitgeber wieder anzeigen kann.
-</p>
-<p>
-Wenn du die App deinstallierst oder die lokalen App-Daten löschst, können diese lokal
-gespeicherten Daten verloren gehen.
-</p>
+<h2>4. Lokale Speicherung und Android-Systemdatensicherung</h2>
+<p>Die App speichert Einstellungen, Arbeitgeber, Arbeitszeiten, Pausen und Auszahlungen lokal auf dem Android-Gerät. Dadurch stehen die Einträge beim erneuten Öffnen der App zur Verfügung. Die Speicherung erfolgt, bis du die jeweiligen Daten in der App oder über die Android-Einstellungen löschst.</p>
+<p>Die App erlaubt Android die Sicherung und Wiederherstellung ihrer lokalen Daten. Abhängig vom Gerät und den von dir gewählten Sicherungseinstellungen können App-Daten durch das Betriebssystem in die Gerätesicherung, beispielsweise im Google-Konto, oder bei der Übertragung auf ein neues Gerät einbezogen werden. Das ist eine Funktion des Betriebssystems und keine eigene Time-Sync-Cloud-Synchronisierung. TSProductionsLab erhält dadurch keinen Zugriff auf dein Google-Konto oder diese Sicherungen.</p>
+<p>Die Verwaltung und Löschung solcher Sicherungen erfolgt über die jeweiligen Geräte- und Kontoeinstellungen. Das Löschen von Einträgen in Time Sync entfernt nicht automatisch bereits exportierte Dateien oder bereits angelegte Sicherungskopien. Nach einer Wiederherstellung können zuvor gesicherte Einträge erneut erscheinen.</p>
+<p>Wenn du die App deinstallierst oder die lokalen App-Daten löschst, können die lokal gespeicherten Daten verloren gehen. Eine Wiederherstellung durch Time Sync wird nicht zugesichert.</p>
 
-<h2>5. Firebase und Google Analytics</h2>
-<p>
-Time Sync verwendet <strong>Firebase/Google Analytics</strong> zur technischen und
-statistischen Analyse der Nutzung der App.
-</p>
-<p>Google Analytics for Firebase kann bestimmte Daten automatisch erfassen, beispielsweise:</p>
-<ul>
-<li>App-Instanz-ID</li>
-<li>Informationen zur Nutzung der App</li>
-<li>Sitzungen und App-Aufrufe</li>
-<li>technische Informationen zum Gerät</li>
-<li>Informationen zum Betriebssystem</li>
-<li>grobe geografische Informationen</li>
-<li>Android-Werbe-ID, soweit diese entsprechend konfiguriert und verfügbar ist</li>
-</ul>
+<h2>5. Nutzungsanalyse und ältere App-Versionen</h2>
+<h3>Ab Version 1.0.5</h3>
+<p>Ab Version 1.0.5 sind Firebase Analytics sowie die bisher ungenutzten Firebase-Komponenten für Anmeldung und Datenbank aus der App entfernt. Time Sync verwendet in dieser Version keine eigene Nutzungsanalyse und sendet deine Arbeitszeit-, Arbeitgeber-, Pausen-, Lohn-, Provisions- oder Auszahlungsdaten nicht an Firebase.</p>
+<h3>Bis einschließlich Version 1.0.4</h3>
+<p>Diese älteren Versionen enthalten Google Analytics for Firebase zur technischen und statistischen Analyse der App-Nutzung. Der Dienst kann automatisch folgende Daten erfassen:</p>
+<ul><li>App-Instanz-ID</li><li>Nutzungsereignisse, Sitzungen und App-Aufrufe</li><li>technische Geräte- und Betriebssysteminformationen</li><li>aus der IP-Adresse abgeleitete grobe geografische Informationen</li><li>Android-Werbe-ID, soweit verfügbar</li></ul>
+<p>Die Analytics-Daten dienen dem Verständnis der App-Nutzung und der Weiterentwicklung. Die in Time Sync selbst eingegebenen Arbeitszeiten, Arbeitgeber, Lohnangaben, Provisionen und Auszahlungen werden nicht als solche an Analytics oder Firestore übertragen.</p>
+<p>Für diese Analyse verarbeitet Google Daten nach den Bedingungen seiner Dienste. Ein Update auf Version 1.0.5 entfernt diese Analysekomponenten für die weitere Nutzung. Es löscht nicht automatisch bereits bei Google verarbeitete Analytics-Daten. Bei Fragen zu solchen Daten oder Löschanfragen kannst du uns unter timesync.support@gmail.com kontaktieren. Ohne eine Zuordnungsmöglichkeit können wir einzelne Analytics-Datensätze möglicherweise nicht deiner Person zuordnen.</p>
+<p>Weitere Informationen: <a href="https://support.google.com/analytics/answer/11582702">Datenerfassung durch Google Analytics for Firebase</a>.</p>
 
-<p>
-Die Analytics-Daten dienen insbesondere dazu, die technische Stabilität und Nutzung von
-Time Sync zu verstehen und die App weiterzuentwickeln.
-</p>
-
-<p>
-<strong>Wichtig:</strong> Die in Time Sync eingegebenen Arbeitszeiten, Arbeitgeber,
-Lohnangaben und Provisionen werden in der derzeitigen Version nicht als Arbeitszeitdaten
-an Firestore übertragen.
-</p>
-
-<h2>6. Firebase Authentication und Cloud Firestore</h2>
-<p>
-Die App enthält technische Komponenten für Firebase Authentication und Cloud Firestore.
-</p>
-<p>
-In der derzeit veröffentlichten Version werden diese Dienste jedoch
-<strong>nicht zur Speicherung deiner Arbeitszeit-, Arbeitgeber- oder Lohndaten</strong>
-verwendet.
-</p>
-<p>
-Eine zukünftige Cloud-Synchronisierung kann eine Änderung dieser Datenschutzerklärung
-erforderlich machen.
-</p>
+<h2>6. Anmeldung und Cloud-Synchronisierung</h2>
+<p>Die aktuelle Time-Sync-Funktionalität benötigt kein Benutzerkonto. Es erfolgt keine Speicherung deiner Arbeitszeit-, Arbeitgeber- oder Lohndaten in Cloud Firestore. Die bis einschließlich Version 1.0.4 enthaltenen Firebase-Komponenten für Authentication und Firestore wurden für diese Funktionen nicht verwendet und sind ab Version 1.0.5 entfernt.</p>
+<p>Eine mögliche spätere Cloud-Erweiterung ist noch nicht Bestandteil dieser Funktionalität. Vor ihrer Einführung werden die Datenverarbeitung und diese Datenschutzerklärung entsprechend angepasst.</p>
 
 <h2>7. Weitergabe von Daten</h2>
-<p>
-Wir verkaufen personenbezogene Daten nicht.
-</p>
-<p>
-Die lokal in Time Sync gespeicherten Arbeitszeit- und Arbeitgeberdaten werden von der App
-nicht zu Werbezwecken an Dritte übertragen.
-</p>
-<p>
-Für die technische Analyse kann Google Analytics for Firebase Daten entsprechend den
-technischen und vertraglichen Bedingungen der eingesetzten Google-Dienste verarbeiten.
-</p>
+<p>Wir verkaufen personenbezogene Daten nicht. Time Sync überträgt die lokal eingegebenen Arbeitszeit-, Arbeitgeber-, Pausen-, Lohn-, Provisions- und Auszahlungsdaten nicht zu Werbezwecken an Dritte.</p>
+<p>Die für ältere App-Versionen mögliche Verarbeitung durch Google Analytics ist in Abschnitt 5 beschrieben. Hinweise zur Android-Systemdatensicherung findest du in Abschnitt 4. Über die weitere Verwendung selbst erstellter Exporte entscheidest du, wie in Abschnitt 9 beschrieben.</p>
 
 <h2>8. Datensicherheit</h2>
-<p>
-Wir treffen angemessene technische Maßnahmen, um die Verarbeitung der Daten zu schützen.
-</p>
-<p>
-Daten, die durch Firebase/Google-Dienste übertragen werden, werden bei der Übertragung
-verschlüsselt.
-</p>
-<p>
-Da Arbeitszeit- und Arbeitgeberdaten derzeit lokal auf dem Gerät gespeichert werden,
-hängt deren Schutz auch von der Sicherung des verwendeten Android-Geräts ab.
-</p>
-<p>Wir empfehlen insbesondere:</p>
-<ul>
-<li>das Gerät mit PIN, Passwort oder biometrischer Sperre zu schützen,</li>
-<li>aktuelle Android-Sicherheitsupdates zu installieren,</li>
-<li>das Gerät nicht ungeschützt weiterzugeben.</li>
-</ul>
+<p>Die App-Daten werden im geschützten lokalen App-Speicher von Android abgelegt. Ihr Schutz hängt auch von der Sicherung deines Android-Geräts ab. Wir empfehlen, eine Gerätesperre zu verwenden, aktuelle Sicherheitsupdates zu installieren und das Gerät nicht ungeschützt weiterzugeben.</p>
+<p>Übertragungen durch Google Analytics in älteren Versionen werden laut Google während der Übertragung verschlüsselt. Der Schutz einer Android-Systemdatensicherung hängt von Gerät, Betriebssystem und gewählter Sicherung ab.</p>
+<p>Für exportierte Dateien gelten die Schutzmechanismen des jeweiligen Speicherorts oder Empfängers. Bewahre Exporte mit Lohn- oder Arbeitgeberangaben entsprechend geschützt auf.</p>
 
 <h2>9. Exporte</h2>
 <p>
@@ -196,9 +139,7 @@ Nach den geltenden Datenschutzvorschriften können dir insbesondere folgende Rec
 </ul>
 
 <p>
-Da die Arbeitszeit- und Arbeitgeberdaten derzeit grundsätzlich lokal auf deinem Gerät
-gespeichert werden, kannst du diese Daten innerhalb der App verwalten oder durch Löschen
-der App-Daten bzw. Deinstallation der App entfernen.
+Du kannst lokal gespeicherte Einträge in der App bearbeiten oder löschen. Wenn du einen Arbeitgeber löschst, werden nach deiner Bestätigung auch alle damit verbundenen Arbeitszeiten und Auszahlungen gelöscht. Alle lokalen App-Daten kannst du über die Android-App-Einstellungen entfernen. Exportierte Dateien und Betriebssystem-Sicherungen sind gesondert zu verwalten; siehe Abschnitte 4 und 9.
 </p>
 
 <p>
@@ -226,5 +167,6 @@ kontaktieren:
 E-Mail: <strong>timesync.support@gmail.com</strong>
 </p>
 
-</body>
-</html>
+
+
+</body></html>
