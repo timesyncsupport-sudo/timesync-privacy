@@ -27,9 +27,9 @@ p, li { font-size: 16px; }
 </head><body>
 
 <h1>Datenschutzerklärung für Time Sync</h1>
-<p><strong>Stand: 16. Oktober 2026</strong></p>
+<p><strong>Stand: 24. Oktober 2026 – einschließlich Funktionen ab Version 1.0.7</strong></p>
 
-<div class="notice"><strong>Versionshinweis:</strong> Ab Version 1.0.5 verzichtet Time Sync auf Firebase und Google Analytics. Bis einschließlich Version 1.0.4 enthaltene Analysefunktionen werden durch ein Update dieses Textes allein nicht auf bereits installierten Geräten deaktiviert. Die Hinweise zu älteren Versionen bleiben deshalb nachfolgend aufgeführt.</div>
+<div class="notice"><strong>Versionshinweis:</strong> Ab Version 1.0.5 verzichtet Time Sync auf Firebase und Google Analytics. Bis einschließlich Version 1.0.4 enthaltene Analysefunktionen werden durch ein Update dieses Textes allein nicht auf bereits installierten Geräten deaktiviert. Die Hinweise zu älteren Versionen bleiben deshalb nachfolgend aufgeführt. Version 1.0.7 ergänzt manuelle Sicherungsdateien, die lokal oder auf deine ausdrückliche Auswahl in deinem eigenen Google Drive gespeichert werden können. Eine automatische Synchronisierung wird nicht angeboten.</div>
 <h2>1. Verantwortlicher</h2>
 <p>Verantwortlicher für die Verarbeitung personenbezogener Daten im Zusammenhang mit der App
 <strong>Time Sync – Digitale Arbeitszeiterfassung</strong> ist:</p>
@@ -70,6 +70,7 @@ und welche Rechte dir zustehen.
 <li>gegebenenfalls Angaben zu Provisionen je Zeiteintrag</li>
 <li>Auszahlungsbeträge, Zahlungsdatum und zugehöriger Abrechnungsmonat</li>
 <li>berechnete Vergütungen und offene Beträge</li>
+<li>optional deinen Namen für Auswertungen und Exporte</li>
 <li>Einstellungen der App</li>
 <li>von dir erzeugte Auswertungen und Exporte</li>
 </ul>
@@ -79,10 +80,17 @@ Diese Daten werden in der derzeitigen App-Version grundsätzlich
 <strong>lokal auf deinem Android-Gerät</strong> gespeichert.
 </p>
 <p>
-Time Sync überträgt diese Eingaben nicht automatisch an Firebase oder einen eigenen Server. Davon zu unterscheiden ist eine mögliche Android-Systemdatensicherung, die im folgenden Abschnitt beschrieben wird.
+Time Sync überträgt diese Eingaben nicht automatisch an Firebase oder einen eigenen Server. Davon zu unterscheiden sind die von dir selbst gestartete Dateisicherung und eine mögliche Android-Systemdatensicherung, die im folgenden Abschnitt beschrieben werden.
 </p>
 
-<h2>4. Lokale Speicherung und Android-Systemdatensicherung</h2>
+<h2>4. Lokale Speicherung, manuelle Sicherung und Android-Systemdatensicherung</h2>
+<h3>4.1 Manuelle Sicherung ab Version 1.0.7</h3>
+<p>Du kannst selbst eine JSON-Sicherungsdatei mit Arbeitgebern, Arbeitszeiten, Pausen, Provisionen, Auszahlungen und deinem optionalen Abrechnungsnamen erstellen. Anzeige-Einstellungen werden dabei nicht mitgesichert. Über die Android-Dateiauswahl wählst du entweder einen lokalen Speicherort oder Google Drive. Die Sicherung enthält den Stand zum Zeitpunkt ihrer Erstellung; sie wird nicht automatisch aktualisiert.</p>
+<p>Die Schaltfläche „Lokal sichern“ beschränkt die Dateiauswahl auf lokalen Speicher. Bei „In Google Drive sichern“ wählst du in der Android-Dateiauswahl Google Drive, dein eigenes Konto und den Ordner. Die Drive-App muss hierfür auf deinem Gerät eingerichtet sein. Die Übertragung und Speicherung in deinem Google-Konto erfolgt durch Google Drive unter den für dein Konto geltenden Bedingungen. TimeSync betreibt hierfür keinen eigenen Cloudserver und benötigt keinen eigenen Login. TimeSync erhält nur Zugriff auf die von dir ausgewählte Sicherungsdatei; TSProductionsLab erhält dadurch keinen Zugriff auf die Datei oder dein Google-Konto.</p>
+<p>Google Drive kann die Datei zunächst lokal zwischenspeichern und den Upload später abschließen. Prüfe deshalb vor einem Handywechsel in der Drive-App, ob die Sicherung vollständig hochgeladen wurde. Für die Verarbeitung durch Google gelten ergänzend die <a href="https://policies.google.com/privacy?hl=de">Datenschutzhinweise von Google</a>.</p>
+<p>Eine Sicherung kann vom lokalen Speicher oder aus Google Drive manuell eingelesen werden. Vor der Wiederherstellung wird sie geprüft; erst nach deiner Bestätigung wird der vorhandene Datenbestand ersetzt. Es gibt kein automatisches Zusammenführen und keine automatische Synchronisierung zwischen Geräten. Ohne verfügbare Sicherungsdatei kann TimeSync gelöschte Daten nicht wiederherstellen.</p>
+<p>Die Sicherungsdatei selbst wird von TimeSync nicht verschlüsselt. Sie enthält persönliche Arbeits- und Lohndaten. Bewahre sie geschützt auf und teile sie nur bewusst. Zur leichteren erneuten Auswahl merkt sich die App auf deinem Gerät den Verweis auf eine von dir gewählte Drive-Datei. Das ist keine Anmeldung bei einem eigenen TimeSync-Dienst und kein allgemeiner Zugriff auf dein Drive-Laufwerk.</p>
+<h3>4.2 Android-Systemdatensicherung</h3>
 <p>Die App speichert Einstellungen, Arbeitgeber, Arbeitszeiten, Pausen und Auszahlungen lokal auf dem Android-Gerät. Dadurch stehen die Einträge beim erneuten Öffnen der App zur Verfügung. Die Speicherung erfolgt, bis du die jeweiligen Daten in der App oder über die Android-Einstellungen löschst.</p>
 <p>Die App erlaubt Android die Sicherung und Wiederherstellung ihrer lokalen Daten. Abhängig vom Gerät und den von dir gewählten Sicherungseinstellungen können App-Daten durch das Betriebssystem in die Gerätesicherung, beispielsweise im Google-Konto, oder bei der Übertragung auf ein neues Gerät einbezogen werden. Das ist eine Funktion des Betriebssystems und keine eigene Time-Sync-Cloud-Synchronisierung. TSProductionsLab erhält dadurch keinen Zugriff auf dein Google-Konto oder diese Sicherungen.</p>
 <p>Die Verwaltung und Löschung solcher Sicherungen erfolgt über die jeweiligen Geräte- und Kontoeinstellungen. Das Löschen von Einträgen in Time Sync entfernt nicht automatisch bereits exportierte Dateien oder bereits angelegte Sicherungskopien. Nach einer Wiederherstellung können zuvor gesicherte Einträge erneut erscheinen.</p>
@@ -100,11 +108,11 @@ Time Sync überträgt diese Eingaben nicht automatisch an Firebase oder einen ei
 
 <h2>6. Anmeldung und Cloud-Synchronisierung</h2>
 <p>Die aktuelle Time-Sync-Funktionalität benötigt kein Benutzerkonto. Es erfolgt keine Speicherung deiner Arbeitszeit-, Arbeitgeber- oder Lohndaten in Cloud Firestore. Die bis einschließlich Version 1.0.4 enthaltenen Firebase-Komponenten für Authentication und Firestore wurden für diese Funktionen nicht verwendet und sind ab Version 1.0.5 entfernt.</p>
-<p>Eine mögliche spätere Cloud-Erweiterung ist noch nicht Bestandteil dieser Funktionalität. Vor ihrer Einführung werden die Datenverarbeitung und diese Datenschutzerklärung entsprechend angepasst.</p>
+<p>Die optionale, manuell gestartete Sicherung in Google Drive ist in Abschnitt 4.1 beschrieben. Sie ist keine automatische Cloud-Synchronisierung. Eine automatische Synchronisierung zwischen Geräten ist nicht Bestandteil von Version 1.0.7 und bleibt einer möglichen späteren Erweiterung vorbehalten. Vor deren Einführung werden die Datenverarbeitung und diese Datenschutzerklärung erneut geprüft und angepasst.</p>
 
 <h2>7. Weitergabe von Daten</h2>
 <p>Wir verkaufen personenbezogene Daten nicht. Time Sync überträgt die lokal eingegebenen Arbeitszeit-, Arbeitgeber-, Pausen-, Lohn-, Provisions- und Auszahlungsdaten nicht zu Werbezwecken an Dritte.</p>
-<p>Die für ältere App-Versionen mögliche Verarbeitung durch Google Analytics ist in Abschnitt 5 beschrieben. Hinweise zur Android-Systemdatensicherung findest du in Abschnitt 4. Über die weitere Verwendung selbst erstellter Exporte entscheidest du, wie in Abschnitt 9 beschrieben.</p>
+<p>Die für ältere App-Versionen mögliche Verarbeitung durch Google Analytics ist in Abschnitt 5 beschrieben. Hinweise zur manuellen Sicherung, zur optionalen Übergabe einer von dir gewählten Sicherungsdatei an Google Drive und zur Android-Systemdatensicherung findest du in Abschnitt 4. Über die weitere Verwendung selbst erstellter Exporte entscheidest du, wie in Abschnitt 9 beschrieben.</p>
 
 <h2>8. Datensicherheit</h2>
 <p>Die App-Daten werden im geschützten lokalen App-Speicher von Android abgelegt. Ihr Schutz hängt auch von der Sicherung deines Android-Geräts ab. Wir empfehlen, eine Gerätesperre zu verwenden, aktuelle Sicherheitsupdates zu installieren und das Gerät nicht ungeschützt weiterzugeben.</p>
@@ -116,7 +124,7 @@ Time Sync überträgt diese Eingaben nicht automatisch an Firebase oder einen ei
 Time Sync kann Auswertungen und Arbeitszeitdaten exportieren.
 </p>
 <p>
-Wenn du einen Export beispielsweise als PDF, HTML oder XLS erstellst oder über die
+Wenn du einen Export beispielsweise als PDF, HTML oder Excel-Datei (XLSX; in älteren Versionen XLS) erstellst oder über die
 Android-Teilen-Funktion weitergibst, entscheidest du selbst, wohin diese Datei übertragen
 oder gespeichert wird.
 </p>
